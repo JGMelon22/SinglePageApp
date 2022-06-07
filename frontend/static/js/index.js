@@ -1,3 +1,9 @@
+// History API
+const navigateTo = url => {
+    history.pushState(null, null, url);
+    router();
+};
+
 // Client side router
 const router = async () => {
     const routes = [
