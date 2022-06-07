@@ -1,3 +1,5 @@
+import Dashboard from "./views/Dashboard.js";
+
 // History API
 const navigateTo = url => {
     history.pushState(null, null, url);
@@ -9,18 +11,18 @@ const router = async () => {
     const routes = [
         {
             path: "/",
-            view: () => console.log("Viewing Dashboard")
+            view: Dashboard
         },
 
-        {
-            path: "/posts",
-            view: () => console.log("Viewing Posts")
-        },
+        // {
+        //     path: "/posts",
+        //     view: () => console.log("Viewing Posts")
+        // },
 
-        {
-            path: "/settings",
-            view: () => console.log("Viewing Settings")
-        }
+        // {
+        //     path: "/settings",
+        //     view: () => console.log("Viewing Settings")
+        // }
     ];
 
     // Test each router for potential matches 
@@ -41,6 +43,11 @@ const router = async () => {
             isMatch: true
         };
     }
+
+    // New instance of the view which was matched at the route
+    const view = new match.route.view();
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
 
     console.log(match.route.view());
 };
