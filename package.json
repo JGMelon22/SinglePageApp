@@ -1,11 +1,23 @@
 {
   "name": "singlepageapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "An single page application made using JS, CSS and HTML",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGMelon22/SinglePageApp.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGMelon22/SinglePageApp/issues"
+  },
+  "homepage": "https://github.com/JGMelon22/SinglePageApp#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
