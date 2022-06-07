@@ -45,6 +45,9 @@ const router = async () => {
     console.log(match.route.view());
 };
 
+// Changes the current history entry to that of the last page the user visited
+window.addEventListener("popstate", router)
+
 // Calling te route
 document.addEventListener("DOMContentLoaded", () => {
 
