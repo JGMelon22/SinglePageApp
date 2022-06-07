@@ -28,7 +28,15 @@ const router = async () => {
     // Looking for a match
     let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
 
-    console.log(potentialMatches);
+    // If there are no matches, will set a default to the dashboard (gimmick 404)
+    if (!match) {
+        match = {
+            route: routes[0],
+            isMatch: true
+        };
+    }
+
+    console.log(match.route.view());
 };
 
 // Calling te route
