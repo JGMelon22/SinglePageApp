@@ -1,4 +1,6 @@
 import Dashboard from "./views/Dashboard.js";
+import Posts from "./views/Posts.js";
+import Settings from "./views/Settings.js";
 
 // History API
 const navigateTo = url => {
@@ -14,15 +16,15 @@ const router = async () => {
             view: Dashboard
         },
 
-        // {
-        //     path: "/posts",
-        //     view: () => console.log("Viewing Posts")
-        // },
+        {
+            path: "/posts",
+            view: Posts
+        },
 
-        // {
-        //     path: "/settings",
-        //     view: () => console.log("Viewing Settings")
-        // }
+        {
+            path: "/settings",
+            view: Settings
+        }
     ];
 
     // Test each router for potential matches 
