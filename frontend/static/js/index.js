@@ -25,5 +25,13 @@ const router = async () => {
         };
     });
 
+    // Looking for a match
+    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+
     console.log(potentialMatches);
 };
+
+// Calling te route
+document.addEventListener("DOMContentLoaded", () => {
+    router();
+});
