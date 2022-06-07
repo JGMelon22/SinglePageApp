@@ -47,5 +47,16 @@ const router = async () => {
 
 // Calling te route
 document.addEventListener("DOMContentLoaded", () => {
+
+    document.body.addEventListener("click", e => {
+        if (e.target.matches(["data-link"])) {
+
+            // Navigates to the specific data link instead of a default behavior
+            // And without refreshes
+            e.preventDefault();
+            navigateTo(e.target.href);
+        }
+    });
+
     router();
 });
